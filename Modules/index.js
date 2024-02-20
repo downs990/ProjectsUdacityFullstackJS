@@ -5,10 +5,7 @@
 // You will also need to include scripts that run eslint and prettier. There are errors in the
 // index.js file. Run the scripts and fix the errors based off the results displayed in the console.
 
-
-
-
-// Solution: 
+// Solution:
 /*
 1. Initialized NPM and entered necessary details.
     npm init
@@ -22,20 +19,18 @@
     npm i --save-dev eslint-plugin-prettier@4.0.0
 6. Created scripts for both prettier and ESLint. Example:
     "lint": "eslint 'index.js'", 
-    "prettier": "prettier --config .prettierrc '*.js' --write"
+    "prettier": "prettier --config .prettierrc *.js --write"
 7. Run prettier and ESLint to find errors
     npm run prettier 
     npm run lint
 8. Fixed errors
 9. Run ESLint again to confirm errors were fixed
 
+  **********************************************************************
+        ESLint Documentation: https://www.npmjs.com/package/eslint
+  **********************************************************************
+
 */
-
-
-
-
-
-
 
 // Import readline module for getting input from console
 // Find more here: https://nodejs.org/api/readline.html#readline_readline
@@ -61,8 +56,8 @@ const menuQ = () => {
     }
   });
 };
-let milkQ = () => {
-  return new Promise((resolve, reject) => {
+const milkQ = () => {
+  return new Promise((resolve) => {
     rl.question('How many cups of milk to add? ', (answer) => {
       resolve(answer);
     });
@@ -87,14 +82,14 @@ const userOptions = async (mochaObject) => {
 };
 
 const espressoQ = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     rl.question('How many shots of espresso to add? ', (answer) => {
       resolve(answer);
     });
   });
 };
 const peppermintQ = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     rl.question('How many shots of peppermint to add? ', (answer) => {
       resolve(answer);
     });
@@ -156,19 +151,21 @@ const main = () => {
         case 0: {
           break;
         }
-        case 1:
-          let whiteMochaVar = 0;
+        case 1:{ 
           const whiteMocha = new WhiteChocolateMocha();
           await userOptions(whiteMocha);
           break;
-        case 2:
+        }
+        case 2:{ 
           const darkMocha = new DarkChocolateMocha();
           await userOptions(darkMocha);
           break;
-        case 3:
+        }
+        case 3:{
           const peppermintMocha = new PeppermintMocha();
           await userOptions(peppermintMocha);
           break;
+        }
         default: {
           console.log('Option invalid, please choose from menu.');
           break;
