@@ -7,7 +7,7 @@ const rl = readline.createInterface({
   // readable stream
   input: process.stdin,
   // writeable stream
-  output: process.stdout
+  output: process.stdout 
 });
 
 // Create questions for STDIN Input from console.

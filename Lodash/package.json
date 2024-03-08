@@ -1,0 +1,25 @@
+{
+  "name": "lodash",
+  "version": "1.0.0",
+  "description": "", 
+  "scripts": {
+    "start": "src/main.ts",
+    "lint": "eslint . --ext .ts",
+    "prettier": "prettier --config .prettierrc src/**/*.ts --write",
+    "build": "npx tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
